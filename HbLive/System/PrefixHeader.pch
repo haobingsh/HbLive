@@ -1,0 +1,44 @@
+//
+//  PrefixHeader.pch
+//  TJPYingKe
+//
+//  Created by Walkman on 2016/12/7.
+//  Copyright © 2016年 AaronTang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#ifdef __OBJC__
+#import <MJExtension/MJExtension.h>
+#import <Masonry/Masonry.h>
+
+
+#import "HbSessionManager.h"
+#import "HbCommonAPIConstant.h"
+#import "RequestDataTool.h"
+#import "UserHelper.h"
+#import "PublicHeader.h"
+
+#import "UIView+TJPExtension.h"
+#import "NSArray+TJPArrayUtil.h"
+#import "UIBarButtonItem+TJPItem.h"
+#import "UIImageView+TJPExtension.h"
+
+
+#ifdef DEBUG
+#define TJPLog(...) NSLog(__VA_ARGS__)
+#define TJPLogFunc TJPLog(@"%s", __func__);
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+
+#else
+#define TJPLog(...)
+
+#endif
+
+
+#endif
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GiftComboView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4KZ-4u-W7j" userLabel="背景">
+                    <rect key="frame" x="0.0" y="0.0" width="205" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fTz-49-2NR" userLabel="头像">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="BLv-Zp-Ujh"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AaronTang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUp-xb-v7F" userLabel="昵称">
+                            <rect key="frame" x="50" y="5" width="56" height="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="送出礼物【佛跳墙】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnC-dv-c1b" userLabel="描述">
+                            <rect key="frame" x="50" y="20" width="111" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ag0-VT-lr9" userLabel="礼物">
+                            <rect key="frame" x="165" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="24z-RL-V12"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0023275582901554071" green="0.0023275582901554071" blue="0.0023275582901554071" alpha="0.79772777288732399" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="205" id="Cin-eS-K4v"/>
+                        <constraint firstItem="fTz-49-2NR" firstAttribute="top" secondItem="4KZ-4u-W7j" secondAttribute="top" id="I6l-Yq-TbG"/>
+                        <constraint firstItem="hUp-xb-v7F" firstAttribute="leading" secondItem="fTz-49-2NR" secondAttribute="trailing" constant="10" id="N0h-nU-UUg"/>
+                        <constraint firstAttribute="trailing" secondItem="ag0-VT-lr9" secondAttribute="trailing" id="OlG-6z-wyW"/>
+                        <constraint firstAttribute="bottom" secondItem="fTz-49-2NR" secondAttribute="bottom" id="XWc-7h-Mim"/>
+                        <constraint firstAttribute="bottom" secondItem="ag0-VT-lr9" secondAttribute="bottom" id="byi-Ls-5Tb"/>
+                        <constraint firstItem="hUp-xb-v7F" firstAttribute="top" secondItem="4KZ-4u-W7j" secondAttribute="top" constant="5" id="nxP-bf-c0g"/>
+                        <constraint firstItem="fTz-49-2NR" firstAttribute="leading" secondItem="4KZ-4u-W7j" secondAttribute="leading" id="qdK-7g-bFa"/>
+                        <constraint firstAttribute="bottom" secondItem="UnC-dv-c1b" secondAttribute="bottom" constant="5" id="tfC-Uh-yOb"/>
+                        <constraint firstItem="ag0-VT-lr9" firstAttribute="top" secondItem="4KZ-4u-W7j" secondAttribute="top" id="veX-9w-mib"/>
+                        <constraint firstItem="UnC-dv-c1b" firstAttribute="leading" secondItem="fTz-49-2NR" secondAttribute="trailing" constant="10" id="wek-vK-v1W"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmQ-lj-uK4" userLabel="Gift Count" customClass="TJPCountLabel">
+                    <rect key="frame" x="215" y="0.0" width="31" height="17"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="VmQ-lj-uK4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HrN-fh-gpp"/>
+                <constraint firstItem="4KZ-4u-W7j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PIb-ve-ezt"/>
+                <constraint firstAttribute="bottom" secondItem="4KZ-4u-W7j" secondAttribute="bottom" id="Vq8-t2-FJg"/>
+                <constraint firstItem="VmQ-lj-uK4" firstAttribute="leading" secondItem="4KZ-4u-W7j" secondAttribute="trailing" constant="10" id="WB6-iw-cC7"/>
+                <constraint firstItem="4KZ-4u-W7j" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="saA-13-WNd"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgView" destination="4KZ-4u-W7j" id="Kn3-L8-UxI"/>
+                <outlet property="giftCountLabel" destination="VmQ-lj-uK4" id="0Uy-ip-HrA"/>
+                <outlet property="giftDescLabel" destination="UnC-dv-c1b" id="ceU-gX-F4K"/>
+                <outlet property="giftImageView" destination="ag0-VT-lr9" id="RKv-tL-ZbZ"/>
+                <outlet property="iconImageView" destination="fTz-49-2NR" id="Iiv-0N-enO"/>
+                <outlet property="senderLabel" destination="hUp-xb-v7F" id="uTX-ap-BHU"/>
+            </connections>
+            <point key="canvasLocation" x="6" y="-249.5"/>
+        </view>
+    </objects>
+</document>
