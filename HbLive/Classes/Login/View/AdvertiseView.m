@@ -155,7 +155,7 @@ static CFTimeInterval const duration = 0.25f;
         if (![model.image hasPrefix:@"http://"]) {
             imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kCommonServiceAPI, model.image]];
         }
-//        //通过sd下载
+        //通过sd下载
 //        [[SDWebImageManager sharedManager] downloadImageWithURL:imageUrl
 //                                                        options:SDWebImageAvoidAutoSetImage
 //                                                       progress:nil
@@ -164,6 +164,12 @@ static CFTimeInterval const duration = 0.25f;
 //                                                          [CacheHelper setAdvertiseLink:model.link];
 //                                                          TJPLog(@"广告图片下载成功");
 //                                                      }];
+        
+        [[SDWebImageManager sharedManager] loadImageWithURL:imageUrl options:SDWebImageAvoidAutoSetImage progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+            [CacheHelper setAdvertiseImage:model.image];
+            [CacheHelper setAdvertiseLink:model.link];
+            TJPLog(@"广告图片下载成功");
+        }];
         
     }];
 }
@@ -211,8 +217,11 @@ static CFTimeInterval const duration = 0.25f;
 }
 /** 清除广告图片缓存*/
 - (void)cleanAdvertiseImageCache {
-//    [[SDImageCache sharedImageCache] removeImageForKey:[CacheHelper getAdvertiseImage]];
-//    [CacheHelper removeAdvertiseAllData];
+    //[[SDImageCache sharedImageCache] removeImageForKey:[CacheHelper getAdvertiseImage]];
+    [[SDImageCache sharedImageCache] removeImageForKey:[CacheHelper getAdvertiseImage] withCompletion:^{
+        
+    }];
+    [CacheHelper removeAdvertiseAllData];
 }
 
 

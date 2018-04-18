@@ -15,7 +15,8 @@ NSString *const kCommonServiceAPI        = @"http://img2.inke.cn/";
 
 
 /** 热门页接口*/
-NSString *const kHotLiveAPI              = @"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=1";
+//NSString *const kHotLiveAPI              = @"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=1";
+NSString *const kHotLiveAPI              = @"http://baseapi.busi.inke.cn/live/LiveHotList";
 
 /** 广告接口*/
 NSString *const kAdvertiseAPI            = @"http:/service.ingkee.com/advertise/get";

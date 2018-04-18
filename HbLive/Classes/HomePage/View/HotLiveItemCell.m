@@ -31,10 +31,16 @@
     _liveItem = liveItem;
     
     NSURL *imageUrl;
-    if ([liveItem.creator.portrait hasPrefix:@"http://"]) {
-        imageUrl = [NSURL URLWithString:liveItem.creator.portrait];
+//    if ([liveItem.creator.portrait hasPrefix:@"http://"]) {
+//        imageUrl = [NSURL URLWithString:liveItem.creator.portrait];
+//    }else {
+//        imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.meelive.cn/%@",liveItem.creator.portrait]];
+//    }
+    
+    if ([liveItem.portrait hasPrefix:@"http://"]) {
+        imageUrl = [NSURL URLWithString:liveItem.portrait];
     }else {
-        imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.meelive.cn/%@",liveItem.creator.portrait]];
+        imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.meelive.cn/%@",liveItem.portrait]];
     }
     
     [self.headImageView setURLImageWithURL:imageUrl placeHoldImage:[UIImage imageNamed:@"default_head"] isCircle:YES];
@@ -45,21 +51,21 @@
         _addressLabel.text = [NSString stringWithFormat:@"%@>", liveItem.city];
     }
     
-    self.nameLabel.text = liveItem.creator.nick;
+    self.nameLabel.text = liveItem.nick;
     
     [self.anchorImageView setURLImageWithURL:imageUrl placeHoldImage:[UIImage imageNamed:@"default_room"] isCircle:NO];
     self.lookCountLabel.text = [self dealWithOnlineNumber:liveItem.online_users];
 //    TJPLog(@"%@", liveItem.extra.label);
 
     
-    NSArray *array = [LabelItem mj_objectArrayWithKeyValuesArray:liveItem.extra.label];
-    NSMutableArray *tmpArr = [NSMutableArray array];
-    for (LabelItem *item in array) {
-        [tmpArr addObject:item.tab_name];
-    }
-    if (tmpArr.count) {
-        self.tagView.tagInfos = tmpArr;
-    }
+//    NSArray *array = [LabelItem mj_objectArrayWithKeyValuesArray:liveItem.extra.label];
+//    NSMutableArray *tmpArr = [NSMutableArray array];
+//    for (LabelItem *item in array) {
+//        [tmpArr addObject:item.tab_name];
+//    }
+//    if (tmpArr.count) {
+//        self.tagView.tagInfos = tmpArr;
+//    }
 }
 
 

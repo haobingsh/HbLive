@@ -12,25 +12,31 @@
 @class ExtraItem;
 @interface HotLiveItem : NSObject
 
+
 /** 直播流地址 */
-@property (nonatomic, copy) NSString *stream_addr;
+//@property (nonatomic, copy) NSString *stream_addr;
 /** 分享地址*/
-@property (nonatomic, copy) NSString *share_addr;
+//@property (nonatomic, copy) NSString *share_addr;
 /** 观看人数 */
-@property (nonatomic, assign) NSUInteger online_users;
+//@property (nonatomic, assign) NSUInteger online_users;
 /** 城市 */
-@property (nonatomic, copy) NSString *city;
+//@property (nonatomic, copy) NSString *city;
 /** ID号*/
-@property (nonatomic, assign) NSUInteger ID;
+//@property (nonatomic, assign) NSUInteger ID;
 /** 主播信息 */
-@property (nonatomic, strong) CreatorItem *creator;
+//@property (nonatomic, strong) CreatorItem *creator;
 /** 扩展属性*/
-@property (nonatomic, strong) ExtraItem *extra;
+//@property (nonatomic, strong) ExtraItem *extra;
 
 /** 直播间名称*/
-@property (nonatomic, copy) NSString *name;
+//@property (nonatomic, copy) NSString *name;
 
 
+@property (nonatomic, copy) NSString *city;
+@property (nonatomic, copy) NSString *portrait;
+@property (nonatomic, copy) NSString *nick;
+@property (nonatomic, copy) NSString *liveid;
+@property (nonatomic, assign) NSUInteger online_users;
 
 
 /*

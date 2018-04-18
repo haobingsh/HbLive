@@ -95,7 +95,7 @@ static RequestDataTool *dataTool = nil;
             TJPLog(@"%@", error.localizedDescription);
             return;
         }
-        NSMutableArray <HotLiveItem *>*hotModels = [HotLiveItem mj_objectArrayWithKeyValuesArray:responseObject[@"lives"]];
+        NSMutableArray <HotLiveItem *>*hotModels = [HotLiveItem mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
         
         resultBlock(hotModels);
     }];

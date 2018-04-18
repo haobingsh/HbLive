@@ -17,7 +17,7 @@
 @implementation LivingRoomBottomView
 
 + (LivingRoomBottomView *)bottomView {
-    return [[[NSBundle mainBundle] loadNibNamed:@"TJPLivingRoomBottomView" owner:nil options:nil] lastObject];
+    return [[[NSBundle mainBundle] loadNibNamed:@"LivingRoomBottomView" owner:nil options:nil] lastObject];
 }
 
 

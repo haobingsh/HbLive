@@ -220,24 +220,33 @@
     [self loadDataWithLivingRoomSource];
     
     NSURL *imageUrl;
-    if ([liveItem.creator.portrait hasPrefix:@"http://"]) {
-        imageUrl = [NSURL URLWithString:liveItem.creator.portrait];
+//    if ([liveItem.creator.portrait hasPrefix:@"http://"]) {
+//        imageUrl = [NSURL URLWithString:liveItem.creator.portrait];
+//    }else {
+//        imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.meelive.cn/%@",liveItem.creator.portrait]];
+//    }
+//    //play
+//    [self playWithFLV:liveItem.stream_addr placeHolderUrl:imageUrl];
+    
+    if ([liveItem.portrait hasPrefix:@"http://"]) {
+        imageUrl = [NSURL URLWithString:liveItem.portrait];
     }else {
-        imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.meelive.cn/%@",liveItem.creator.portrait]];
+        imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.meelive.cn/%@",liveItem.portrait]];
     }
     //play
-    [self playWithFLV:liveItem.stream_addr placeHolderUrl:imageUrl];
+    //[self playWithFLV:liveItem.stream_addr placeHolderUrl:imageUrl];
+    [self playWithFLV:@"rtmp://live.hkstv.hk.lxdns.com/live/hks" placeHolderUrl:imageUrl];
     
 }
 
 
 - (void)loadDataWithLivingRoomSource {
     WS(weakSelf)
-    //top user
-    [[RequestDataTool shareInstance] getLivingRoomTopUserModelsWithLiveID:_liveItem.ID result:^(NSMutableArray<LiveRoomTopUserItem *> *topUserModels) {
-        weakSelf.topView.topUsers = topUserModels;
-    }];
-    
+//    //top user
+//    [[RequestDataTool shareInstance] getLivingRoomTopUserModelsWithLiveID:_liveItem.ID result:^(NSMutableArray<LiveRoomTopUserItem *> *topUserModels) {
+//        weakSelf.topView.topUsers = topUserModels;
+//    }];
+
     //gift
     [[RequestDataTool shareInstance] getLivingRoomGiftModels:^(NSMutableArray *giftModels) {
         weakSelf.giftData = giftModels;

@@ -82,7 +82,7 @@ static CGFloat const timeInterval           = 80;
 
     //UI
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.tableView registerNib:[UINib nibWithNibName:@"TJPHotLiveItemCell" bundle:nil] forCellReuseIdentifier:cellID];
+    [self.tableView registerNib:[UINib nibWithNibName:@"HotLiveItemCell" bundle:nil] forCellReuseIdentifier:cellID];
     //数据
     [self loadDataForBannerView];
     //刷新

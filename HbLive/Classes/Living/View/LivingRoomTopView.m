@@ -78,19 +78,19 @@ static int randomPeopleNum = 0;
 
 
 - (void)setLiveItem:(HotLiveItem *)liveItem {
-    _liveItem = liveItem;
-    //头像
-    NSURL *imageUrl;
-    if ([liveItem.creator.portrait hasPrefix:@"http://"]) {
-        imageUrl = [NSURL URLWithString:_liveItem.creator.portrait];
-    }else {
-        imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.meelive.cn/%@",_liveItem.creator.portrait]];
-    }
-    [self.headImageView setURLImageWithURL:imageUrl placeHoldImage:[UIImage imageNamed:@"default_head"] isCircle:YES];
-    
-    self.liveCountLab.text = [NSString stringWithFormat:@"%lu", (unsigned long)_liveItem.online_users];
-    
-    self.yingKeNumLab.text = [NSString stringWithFormat:@"映客号:%lu", (unsigned long)_liveItem.creator.ID];
+//    _liveItem = liveItem;
+//    //头像
+//    NSURL *imageUrl;
+//    if ([liveItem.creator.portrait hasPrefix:@"http://"]) {
+//        imageUrl = [NSURL URLWithString:_liveItem.creator.portrait];
+//    }else {
+//        imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.meelive.cn/%@",_liveItem.creator.portrait]];
+//    }
+//    [self.headImageView setURLImageWithURL:imageUrl placeHoldImage:[UIImage imageNamed:@"default_head"] isCircle:YES];
+//    
+//    self.liveCountLab.text = [NSString stringWithFormat:@"%lu", (unsigned long)_liveItem.online_users];
+//    
+//    self.yingKeNumLab.text = [NSString stringWithFormat:@"映客号:%lu", (unsigned long)_liveItem.creator.ID];
     
     self.dateLabel.text = [self getDate];
     //开启定时器
