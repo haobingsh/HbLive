@@ -20,6 +20,7 @@
 #import "RequestDataTool.h"
 #import "UserHelper.h"
 #import "PublicHeader.h"
+#import "HbColor.h"
 
 #import "UIView+TJPExtension.h"
 #import "NSArray+TJPArrayUtil.h"

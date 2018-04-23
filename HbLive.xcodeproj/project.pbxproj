@@ -94,6 +94,9 @@
 		A477BA0420805953001377AE /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A477BA0320805953001377AE /* libbz2.tbd */; };
 		A477BA0620805963001377AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A477BA0520805963001377AE /* UIKit.framework */; };
 		A477BA0820805A7D001377AE /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A477BA0720805A7D001377AE /* libstdc++.tbd */; };
+		A47B92AB208DEA9E00CA3BED /* HbBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47B92A5208DEA9D00CA3BED /* HbBaseViewController.m */; };
+		A47B92AC208DEA9E00CA3BED /* HbBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47B92A6208DEA9D00CA3BED /* HbBaseTableViewController.m */; };
+		A47B92AD208DEA9E00CA3BED /* HbBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A47B92A9208DEA9D00CA3BED /* HbBaseTableView.m */; };
 		B7E5175476741EF0AB57FDD8 /* libPods-HbLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1930033F3260F29750EB41D2 /* libPods-HbLive.a */; };
 /* End PBXBuildFile section */
 
@@ -254,6 +257,13 @@
 		A477BA0320805953001377AE /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		A477BA0520805963001377AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A477BA0720805A7D001377AE /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		A47B92A4208DEA9D00CA3BED /* HbBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HbBaseTableViewController.h; sourceTree = "<group>"; };
+		A47B92A5208DEA9D00CA3BED /* HbBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HbBaseViewController.m; sourceTree = "<group>"; };
+		A47B92A6208DEA9D00CA3BED /* HbBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HbBaseTableViewController.m; sourceTree = "<group>"; };
+		A47B92A7208DEA9D00CA3BED /* HbBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HbBaseViewController.h; sourceTree = "<group>"; };
+		A47B92A9208DEA9D00CA3BED /* HbBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HbBaseTableView.m; sourceTree = "<group>"; };
+		A47B92AA208DEA9D00CA3BED /* HbBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HbBaseTableView.h; sourceTree = "<group>"; };
+		A47B92AE208DEAE600CA3BED /* HbColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HbColor.h; sourceTree = "<group>"; };
 		E28F0B84AEA54BB5484D6C4D /* Pods-HbLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HbLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HbLive/Pods-HbLive.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -337,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				A45D50AA2085967C00CC8AEA /* PublicHeader.h */,
+				A47B92AE208DEAE600CA3BED /* HbColor.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -632,6 +643,7 @@
 		A4711C852084BF060036C2FC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A47B92A2208DEA9D00CA3BED /* Base */,
 				A45D517E2085F4B700CC8AEA /* Mine */,
 				A45D51452085EAD600CC8AEA /* Login */,
 				A45D51102085E16200CC8AEA /* HomePage */,
@@ -709,6 +721,35 @@
 				1930033F3260F29750EB41D2 /* libPods-HbLive.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A47B92A2208DEA9D00CA3BED /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A47B92A3208DEA9D00CA3BED /* Controller */,
+				A47B92A8208DEA9D00CA3BED /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A47B92A3208DEA9D00CA3BED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A47B92A4208DEA9D00CA3BED /* HbBaseTableViewController.h */,
+				A47B92A6208DEA9D00CA3BED /* HbBaseTableViewController.m */,
+				A47B92A7208DEA9D00CA3BED /* HbBaseViewController.h */,
+				A47B92A5208DEA9D00CA3BED /* HbBaseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A47B92A8208DEA9D00CA3BED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A47B92AA208DEA9D00CA3BED /* HbBaseTableView.h */,
+				A47B92A9208DEA9D00CA3BED /* HbBaseTableView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -862,9 +903,11 @@
 				A4711C8F2084BFE40036C2FC /* HbNavigationBar.m in Sources */,
 				A45D51232085E1A800CC8AEA /* NavigationTagItem.m in Sources */,
 				A45D51042085E03300CC8AEA /* DMHeartFlyView.m in Sources */,
+				A47B92AB208DEA9E00CA3BED /* HbBaseViewController.m in Sources */,
 				A45D510C2085E09800CC8AEA /* LivingRoomBottomView.m in Sources */,
 				A45D51522085EAD600CC8AEA /* AdvertiseModel.m in Sources */,
 				A45D50D92085A1D300CC8AEA /* UIImage+TJPImage.m in Sources */,
+				A47B92AD208DEA9E00CA3BED /* HbBaseTableView.m in Sources */,
 				A45D50FB2085DD4C00CC8AEA /* GiftModel.m in Sources */,
 				A45D50E12085A1D300CC8AEA /* UserHelper.m in Sources */,
 				A45D511E2085E1A800CC8AEA /* HotLiveItem.m in Sources */,
@@ -900,6 +943,7 @@
 				A45D51502085EAD600CC8AEA /* LoginViewController.m in Sources */,
 				A45D51212085E1A800CC8AEA /* BannerItem.m in Sources */,
 				A45D50F72085DCAC00CC8AEA /* GiftComboView.m in Sources */,
+				A47B92AC208DEA9E00CA3BED /* HbBaseTableViewController.m in Sources */,
 				A45D51222085E1A800CC8AEA /* ExtraItem.m in Sources */,
 				A45D51402085E94900CC8AEA /* UserView.m in Sources */,
 				A45D50D52085A1D300CC8AEA /* NSArray+TJPArrayUtil.m in Sources */,

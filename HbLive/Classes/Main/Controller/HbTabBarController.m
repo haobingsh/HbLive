@@ -7,7 +7,7 @@
 //
 
 #import "HbTabBarController.h"
-//#import "TJPCameraLivingController.h"
+#import "CameraLivingController.h"
 #import "HbNavigationController.h"
 
 #import "UIImage+TJPImage.h"
@@ -45,7 +45,6 @@
         HbNavigationController *nav = [[HbNavigationController alloc] initWithRootViewController:vc];
         nav.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage originImageWithName:normalImageName] selectedImage:[UIImage originImageWithName:selectedImageName]];
         nav.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
-        
         [self addChildViewController:nav];
     }else {
         [self addChildViewController:vc];
@@ -64,7 +63,7 @@
     HbTabBar *tabbar = [[HbTabBar alloc] init];
     [self setValue:tabbar forKey:@"tabBar"];
     [tabbar setCenterBtnClickBlock:^{
-        //[self presentViewController:[TJPCameraLivingController new] animated:YES completion:nil];
+        [self presentViewController:[CameraLivingController new] animated:YES completion:nil];
     }];
     
 }

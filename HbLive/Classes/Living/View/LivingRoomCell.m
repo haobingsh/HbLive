@@ -236,7 +236,6 @@
     //play
     //[self playWithFLV:liveItem.stream_addr placeHolderUrl:imageUrl];
     [self playWithFLV:@"rtmp://live.hkstv.hk.lxdns.com/live/hks" placeHolderUrl:imageUrl];
-    
 }
 
 
