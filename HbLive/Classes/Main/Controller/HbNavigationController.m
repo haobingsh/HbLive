@@ -72,11 +72,35 @@
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
     //需要过滤根控制器   如果根控制器也要返回手势有效, 就会造成假死状态
-    if (self.childViewControllers.count == 1) {
-        return NO;
-    }
-    if (_isForbidden) {
-        return NO;
+    if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
+        
+        if (self.childViewControllers.count == 1 ) {
+            return NO;
+        }
+        
+        if (_isForbidden) {
+            return NO;
+        }
+        
+        if (self.interactivePopGestureRecognizer &&
+            [[self.interactivePopGestureRecognizer.view gestureRecognizers] containsObject:gestureRecognizer]) {
+            
+            CGPoint tPoint = [(UIPanGestureRecognizer *)gestureRecognizer translationInView:gestureRecognizer.view];
+            
+            if (tPoint.x >= 0) {
+                CGFloat y = fabs(tPoint.y);
+                CGFloat x = fabs(tPoint.x);
+                CGFloat af = 30.0f/180.0f * M_PI;
+                CGFloat tf = tanf(af);
+                if ((y/x) <= tf) {
+                    return YES;
+                }
+                return NO;
+                
+            }else{
+                return NO;
+            }
+        }
     }
     
     return YES;
